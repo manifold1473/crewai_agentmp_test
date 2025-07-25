@@ -1,0 +1,16 @@
+{
+  "jsonrpc": "2.0",
+  "id": "12345678-abcd-ef00-1111-222233334444",
+  "method": "a2a.message",
+  "params": {
+    "message": {
+      "role": "user",
+      "messageId": "abc123-msg-id",
+      "parts": [
+        {
+          "text": "Tell me about AI in India. Search only one website."
+        }
+      ]
+    }
+  }
+}
