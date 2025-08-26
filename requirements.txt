@@ -3,3 +3,4 @@ crewai
 google-genai
 a2a-sdk
 python-dotenv
+a2a-sdk[http-server]

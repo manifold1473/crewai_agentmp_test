@@ -13,7 +13,8 @@ from a2a.types import (
 )
 
 PUBLIC_AGENT_CARD_PATH = "/.well-known/agent.json"
-BASE_URL = "http://localhost:8080"
+# BASE_URL = "http://localhost:8080"
+BASE_URL = "https://financeresearch.a2a.manifoldfinance.omnityplatform.com"
 
 
 async def main() -> None:
@@ -48,7 +49,8 @@ async def main() -> None:
         message_payload = Message(
             role=Role.user,
             messageId=str(uuid.uuid4()),
-            parts=[Part(root=TextPart(text="TEll me about AI in India.search only one website."))],
+            # parts=[Part(root=TextPart(text="TEll me about AI in India.search only one website."))],
+            parts=[Part(root=TextPart(text="Tesla stock today"))],
         )
         request = SendMessageRequest(
             id=str(uuid.uuid4()),

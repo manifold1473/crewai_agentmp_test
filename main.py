@@ -47,8 +47,8 @@ def main(host, port):
 
         capabilities = AgentCapabilities(streaming=False)
         skill = AgentSkill(
-        id='finance_researcher',
-        name='Finance Researcher',
+        id='financial_researcher',
+        name='Financial Researcher',
         description=(
             'Research any topic and provide a summary focused on financial aspects, trends, and impacts.'
         ),
@@ -62,11 +62,11 @@ def main(host, port):
             else f'http://{host}:{port}/'
         )
         agent_card = AgentCard(
-            name='Finance Research Agent',
+            name='Financial Researcher',
             description=(
-                'Researches any topic and provides a concise summary of its financial aspects, using web search and scraping tools.'
+                'FinancialResearcher is a web-powered analytical agent designed to extract and summarize the financial dimensions of any given topic. The agent performs real-time web searches and scraping to gather data from trusted sources, then distills key insights into a concise financial summary. Ideal for use cases like market trend analysis, fiscal impact assessments, or investment research.'
             ),
-            url='http://localhost:8080',
+            url=f"http://localhost:{port}/",
             version='1.0.0',
             default_input_modes=FinanceResearchAgent.SUPPORTED_CONTENT_TYPES,
             default_output_modes=FinanceResearchAgent.SUPPORTED_CONTENT_TYPES,
